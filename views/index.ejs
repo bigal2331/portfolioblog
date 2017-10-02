@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>This is my bulletin</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>Messages</h1>
+
+        <% for(var i = 0; i < messages.length;i++){ %>
+            <div class='msg'>
+                <h3 class='msg-title'><%= messages[i].dataValues.title + " :" %></h3>
+                
+                <p class='msg-body'><%= messages[i].dataValues.body %> </p>
+                
+            </div>
+            
+        <% } %>
+        <a href="/new">
+           <button class='btn'>New Message</button>
+        </a>
+        
+    </body>
+</html>
