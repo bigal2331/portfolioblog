@@ -20,7 +20,6 @@ var Msg = sequelize.define('msg',{
         type: Sequelize.STRING,
         allowNull: false
     },
-    created: Sequelize.DATE
 });
 
 Msg.sync()

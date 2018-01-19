@@ -24,21 +24,26 @@ app.get('/', function(req, res){
 })
 
 app.get('/new', function(req, res){
-    
-    res.render('new');
+   
+     res.render('new',{message:''});
     
 })
 
 app.post('/new', function(req, res){
-    
-    Msg.sync().then(function(){
+     if(req.body.title.length < 1 || req.body.msg.length < 1){
+         console.log('this is the body', req.body.title.length)
+        res.render('new',{message:'Please complete the entire form'});
+    }else{
+       Msg.sync().then(function(){
         
-        Msg.create({
-            title: req.body.title,
-            body: req.body.msg
-        });
-        res.redirect('/')
-    });
+            Msg.create({
+                title: req.body.title,
+                body: req.body.msg
+            });
+            res.redirect('/')
+        });  
+    }
+   
     
 });
 
