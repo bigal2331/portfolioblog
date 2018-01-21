@@ -2,6 +2,7 @@ var express = require('express');
 var Msg = require("./models/sqlz");
 var bodyParser = require('body-parser');
 var path = require("path")
+const { Client }  = require('pg');
 
 var app = express();
 app.use(express.static(path.join(__dirname, 'public')))
@@ -10,7 +11,12 @@ app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json());
 
+const client = new Client({
+  connectionString: process.env.DATABASE_URL,
+  ssl: true,
+});
 
+client.connect();
 app.get('/', function(req, res){
     
   
@@ -54,7 +60,8 @@ app.post('/new', function(req, res){
     
 });
 
-app.listen(8080,function(){
+let port = process.env.PORT || 8081;
+app.listen(port,function(){
   
-  console.log("Server listening at", process.env.PORT);
+  console.log("Server listening at", port);
 });
