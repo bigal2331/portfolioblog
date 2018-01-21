@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio | Blog</title>
+        <link rel="stylesheet" href="/styles.css">
+    </head>
+    <body>
+        <h1>Posts</h1>
+
+        <% for(var i = 0; i < messages.length;i++){ %>
+            <div class='msg'>
+                <h3 class='msg-title'><%= messages[i].dataValues.title + " :" %></h3>
+                
+                <p class='msg-body'><%= messages[i].dataValues.body %> </p>
+                
+            </div>
+            
+        <% } %>
+        <a href="/new">
+           <button class='btn'>New Post</button>
+        </a>        
+        <a href="/">
+           <button class='btn'>Portfolio</button>
+        </a>
+        
+    </body>
+</html>

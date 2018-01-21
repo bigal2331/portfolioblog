@@ -13,13 +13,13 @@ app.use(bodyParser.json());
 
 app.get('/', function(req, res){
     
-   Msg.findAll().then(function(rows){
+  
        
         
         
-        res.render('index',{messages:rows});
+        res.render('index');
         
-    })
+    
     
 })
 
@@ -27,6 +27,13 @@ app.get('/new', function(req, res){
    
      res.render('new',{message:''});
     
+})
+
+
+app.get('/posts', function(req, res){
+    Msg.findAll().then(function(rows){
+     res.render('posts',{messages:rows});
+    })
 })
 
 app.post('/new', function(req, res){

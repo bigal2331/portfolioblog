@@ -1,22 +1,24 @@
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+# Portfolio | Blog Application
+Displays some of the projects I've built
+
+# Installing
 
 
-Welcome to your Node.js project on Cloud9 IDE!
+```
+-- Clone the repository
+git clone https://github.com/bigal2331/portfolioblog.git
+-- Install all the dependencies
+git install
+-- run the application - got to https://localhost:8080 in your browser
+npm start
+```
 
-This chat example showcases how to use `socket.io` with a static `express` server.
+## Data Models
+### 'Posts'
 
-## Running the server
-
-1) Open `server.js` and start the app by clicking on the "Run" button in the top menu.
-
-2) Alternatively you can launch the app from the Terminal:
-
-    $ node server.js
-
-Once the server is running, open the project in the shape of 'https://projectname-username.c9users.io/'. As you enter your name, watch the Users list (on the left) update. Once you press Enter or Send, the message is shared with all connected clients.
+| Column                | Type                	          |
+|-----------------------|---------------------------------|
+|`id`                   | INTEGER (PRIMARY KEY)           |
+|`Title`                | STRING(100) (NOT NULL)(UNIQUE)  |
+|`body`             | STRING(1000) (NOT NULL)         |

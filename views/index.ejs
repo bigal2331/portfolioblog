@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>This is my bulletin</title>
+        <title>Portfolio | Blog</title>
         <link rel="stylesheet" href="/styles.css">
     </head>
     <body>
-        <h1>Messages</h1>
-
-        <% for(var i = 0; i < messages.length;i++){ %>
-            <div class='msg'>
-                <h3 class='msg-title'><%= messages[i].dataValues.title + " :" %></h3>
-                
-                <p class='msg-body'><%= messages[i].dataValues.body %> </p>
-                
-            </div>
+        <h1>Projects</h1>
+        <div>
             
-        <% } %>
-        <a href="/new">
-           <button class='btn'>New Message</button>
+            <a href="http://onelang.herokuapp.com/" target="_blank"><img src="https://img1.wsimg.com/isteam/ip/a6961aae-32f0-4bd4-9b2a-b762cecbff51/06f2cc06-d3c6-4653-aa50-9e42c31a25ef.PNG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:538,h:269,cg:true"></a>
+            <h2>OneLang</h2>
+            <p>A multi-language chat application that lets users communicate with others around the world in their own language.</p>
+        </div>        
+        <div>
+            
+            <a href="http://hallowgram.herokuapp.com/" target="_blank"><img src="https://img1.wsimg.com/isteam/ip/a6961aae-32f0-4bd4-9b2a-b762cecbff51/bc3b1619-af11-4c2b-b8b5-a182550507c0.PNG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:538,h:269,cg:true"></a>
+            <h2>Hallowgram</h2>
+            <p>An Instagram-like social media site where users can post images and interact with others.</p>
+        </div>        
+        <div>
+            
+            <a href="https://github.com/bigal2331/jukeBoxPj/tree/imagePlaylist" target="_blank"><img src="https://img1.wsimg.com/isteam/ip/a6961aae-32f0-4bd4-9b2a-b762cecbff51/1c471e65-7adb-4544-be52-f8a6d69a6c8d.PNG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:538,h:269,cg:true"></a>
+            <h2>BtBx</h2>
+            <p>An online music player where users can create, manage, and listen to their favorite songs.</p>
+        </div>
+
+
+        <a href="/posts">
+           <button class='btn'>View Posts</button>
         </a>
-        
     </body>
 </html>

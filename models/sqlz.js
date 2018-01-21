@@ -2,12 +2,12 @@ var Sequelize = require("sequelize")
 
 // var sequelize = new Sequelize('postgres://ubuntu@localhost:5432/msg_app');
 var sequelize = new Sequelize({
-    username: 'ubuntu',
+    username: 'postgres',
     password: 'Letmeinnow!',
     dialect: 'postgres',
     host: 'localhost',
     port: 5432,
-    database: 'msg_app'
+    database: 'blog'
 });
 
 var Msg = sequelize.define('msg',{
