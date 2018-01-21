@@ -1,6 +1,6 @@
 
 # Portfolio | Blog Application
-Displays some of the projects I've built
+Displays some of the projects I've built. You can view it online <a href="https://portfolioblog18.herokuapp.com/">here</a>
 
 # Installing
 
